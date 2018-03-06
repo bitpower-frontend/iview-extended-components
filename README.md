@@ -16,7 +16,7 @@ that is all.
 ## components
 
 ### number-input
-> 这是一个数字输入框组件。
+> 这是一个数字输入框组件
 
 ### search-input
-> 这是一个搜索输入框组件。
+> 这是一个搜索输入框组件
