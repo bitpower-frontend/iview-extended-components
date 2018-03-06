@@ -1,3 +1,8 @@
+<!--
+  数字输入框
+  修复原有数字输入框能输入负数的问题
+  @author jianguo
+-->
 <template>
   <div :class="numberInputClass" class='ivu-input-number'>
     <input

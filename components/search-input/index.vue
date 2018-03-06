@@ -1,4 +1,8 @@
-<!-- 自定义搜索下拉组件 -->
+<!-- 
+  自定义搜索下拉组件
+  @props optionKey 仅当dropList每个值为obj时, 该参数有用
+  @author jianguo
+-->
 <template>
   <div id="search-input" :class = 'classes'>
     <div class="ivu-select-selection">
