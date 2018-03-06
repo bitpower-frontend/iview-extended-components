@@ -1,7 +1,9 @@
 import NumberInput from './components/number-input/index.vue';
+import SearchInput from './components/search-input/index.vue';
 
 const components = {
   NumberInput,
+  SearchInput
 };
 
 // extend iview
