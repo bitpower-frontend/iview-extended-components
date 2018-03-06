@@ -12,3 +12,11 @@ const extendediView = iviewExtendedComponents.extend(iView);
 Vue.use(extendediView);
 ```
 that is all.
+
+## components
+
+### number-input
+> 暂无描述
+
+### search-input
+> 暂无描述
