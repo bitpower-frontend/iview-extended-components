@@ -16,7 +16,7 @@ const extend = function(iview){
     _install(Vue, opts = {});
     // install extended components
     Object.keys(components).forEach(key => {
-        Vue.component(key, components[key]);
+      Vue.component(key, components[key]);
     });
   };
   return iview;

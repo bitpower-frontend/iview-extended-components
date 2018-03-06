@@ -8,7 +8,7 @@ import iView from 'iview';
 import iviewExtendedComponents from './iview-extended-components';
 import 'iview/dist/styles/iview.css';
 
-iviewExtendedComponents.extend(iView);
-Vue.use(iView);
+const extendediView = iviewExtendedComponents.extend(iView);
+Vue.use(extendediView);
 ```
 that is all.
