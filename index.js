@@ -1,11 +1,13 @@
 import NumberInput from './components/number-input/index.vue';
 import SearchInput from './components/search-input/index.vue';
 import Iicon from './components/i-icon/index.vue';
+import TagInput from './components/tag-input/index.vue';
 
 const components = {
   NumberInput,
   SearchInput,
   Iicon,
+  TagInput,
 };
 
 // extend iview

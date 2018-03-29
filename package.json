@@ -1,0 +1,42 @@
+{
+  "name": "iview-extended-components",
+  "version": "0.0.1",
+  "description": "Extended Components of iView",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack-dev-server --colors --hot --config=./test/webpack.config.js --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitpower-frontend/iview-extended-components.git"
+  },
+  "keywords": [
+    "ui",
+    "vue"
+  ],
+  "author": "Hisheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitpower-frontend/iview-extended-components/issues"
+  },
+  "homepage": "https://github.com/bitpower-frontend/iview-extended-components#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "iview": "^2.11.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.20.3",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  }
+}

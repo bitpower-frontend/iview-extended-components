@@ -28,3 +28,14 @@ that is all.
 ```html
 <i-icon name="search" size="20" color="#ff6600"></i-icon>
 ```
+
+### tag-input
+> 标签输入框
+
+示例
+```html
+<tag-input v-model="tags" :recommend-tags="recommendTags"></tag-input>
+```
+
+预览
+![标签输入框](./preview/tag-input.png)
