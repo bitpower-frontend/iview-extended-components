@@ -20,3 +20,11 @@ that is all.
 
 ### search-input
 > 这是一个搜索输入框组件
+
+### i-icon
+> 用于除了 iview 自带的 `Icon` 组件外，App 本身业务 svg 需要。具体使用见：http://iconfont.cn/help/detail?spm=a313x.7781069.1998910419.d8cf4382a&helptype=code
+
+示例
+```html
+<i-icon name="search" size="20" color="#ff6600"></i-icon>
+```
