@@ -4,7 +4,7 @@
   @author jianguo
 -->
 <template>
-  <div id="search-input" :class = 'classes'>
+  <div class="search-input" :class = 'classes'>
     <div class="ivu-select-selection">
       <input 
         type="text" 
@@ -20,11 +20,12 @@
         @input = 'input'
         @keydown.enter = 'enter'
       />
+      <i class="ivu-icon ivu-input-icon ivu-input-icon-normal" :class="['ivu-icon-' + icon]" v-if='icon' @click="handleIconClick"></i>
     </div>
     <transition name = 'slide-up'>
       <div class = 'ivu-select-dropdown' v-show='isShowDropList'>
-        <ul class = 'ivu-select-dropdown-list' v-show='dropList.length > 0'>
-          <li class = 'ivu-select-item' v-for='(item, index) in dropList' @click='select(index)'>
+        <ul class = 'ivu-select-dropdown-list' v-show='dropList.length > 0 && !loading'>
+          <li class = 'ivu-select-item' v-for='(item, index) in dropList' :key='index' @click='select(index)'>
             {{ optionKey ? item[optionKey] : item }}
           </li>
         </ul>
@@ -75,6 +76,7 @@
       },
       dropList: {
         type: Array,
+        required: true,
         default: () => []
       },
       optionKey: {
@@ -114,7 +116,8 @@
       maxlength: {
         type: Number,
         default: 30
-      }
+      },
+      icon: String,
     },
     watch: {
       value(newVal) {
@@ -128,6 +131,7 @@
       // 输入事件
       input(evt) {
         const val = evt.target.value.trim();
+        this.curValue = val;
         this.$emit('input', val);
         this.$emit('on-change', val);
       },
@@ -163,13 +167,24 @@
           this.$emit('on-change', selected);
         }
         this.$emit('on-select', selected);
+      },
+      // 图标点击事件
+      handleIconClick(evt) {
+        this.$emit('click', evt);
       }
     }
   }
 </script>
 
 <style lang="less">
-  .ivu-select-dropdown-list {
-    width: 100%;
+  .search-input {
+    position: relative;
+    .ivu-select-input {
+      cursor: text;
+    }
+    .ivu-icon { top: 0; }
+    .ivu-select-dropdown-list {
+      width: 100%;
+    }
   }
 </style>
