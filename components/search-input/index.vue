@@ -20,7 +20,7 @@
         @input = 'input'
         @keydown.enter = 'enter'
       />
-      <i class="ivu-icon ivu-input-icon ivu-input-icon-normal" :class="['ivu-icon-' + icon]" v-if='icon' @click="handleIconClick"></i>
+      <i class="ivu-icon ivu-input-icon ivu-input-icon-normal" :class="['ivu-icon-' + icon]" :style='{color: iconColor}' v-if='icon' @click="handleIconClick"></i>
     </div>
     <transition name = 'slide-up'>
       <div class = 'ivu-select-dropdown' v-show='isShowDropList'>
@@ -118,6 +118,7 @@
         default: 30
       },
       icon: String,
+      iconColor: String
     },
     watch: {
       value(newVal) {
@@ -178,13 +179,27 @@
 
 <style lang="less">
   .search-input {
+    @large: 36px;
+    @small: 24px;
     position: relative;
-    .ivu-select-input {
-      cursor: text;
+    &.ivu-select-large {
+      .ivu-icon {
+        font-size: 18px;
+        line-height: @large;
+        height: @large;
+        width: @large;
+      }
     }
+    &.ivu-select-small {
+      .ivu-icon {
+        font-size: 14px;
+        line-height: @small;
+        height: @small;
+        width: @small;
+      }
+    }
+    .ivu-select-input { cursor: text; }
     .ivu-icon { top: 0; }
-    .ivu-select-dropdown-list {
-      width: 100%;
-    }
+    .ivu-select-dropdown-list { width: 100%; }
   }
 </style>
