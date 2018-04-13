@@ -58,7 +58,7 @@
       },
       isShowDropList() {
         let show = false;
-        if(this.value.length > 0) {
+        if(this.curValue.length > 0) {
           show = true;
         }
         return this.isfocus && show;
@@ -142,13 +142,13 @@
         /* if(this.value.length >= this.minlength) {
           this.$emit('on-change', this.value);
         } */
-        this.$emit('on-focus', this.value);
+        this.$emit('on-focus', this.curValue);
       },
       // 失去焦点事件
       blur() {
         setTimeout(() => {
           this.isfocus = false;
-          this.$emit('on-blur', this.value);
+          this.$emit('on-blur', this.curValue);
         }, 300);
       },
       // 按下 enter 键时的事件
@@ -159,14 +159,9 @@
       // 选中事件
       select(index) {
         const selected = this.dropList[index];
-        if(this.optionKey) {
-          this.$emit('input', selected[this.optionKey]);
-          this.$emit('on-change', selected[this.optionKey]);
-        }
-        else {
-          this.$emit('input', selected);
-          this.$emit('on-change', selected);
-        }
+        this.curValue = this.optionKey ? selected[this.optionKey] : selected;
+        this.$emit('input', this.curValue);
+        this.$emit('on-change', this.curValue);
         this.$emit('on-select', selected);
       },
       // 图标点击事件
