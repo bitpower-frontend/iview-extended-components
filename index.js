@@ -33,13 +33,13 @@ const extend = function(iview){
 };
 
 // 加载自定义路径下的 svg 图标
-function setIcons (iconPath){
+/* function setIcons (iconPath){
   const requireAll = requireContext => requireContext.keys().map(requireContext);
   requireAll(require.context(iconPath, false, /\.svg$/));
-}
+} */
 
 module.exports = {
   ...components,
   extend,
-  setIcons,
+  // setIcons,
 };
