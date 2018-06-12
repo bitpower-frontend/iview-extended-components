@@ -1,6 +1,6 @@
 {
   "name": "iview-extended-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extended Components of iView",
   "main": "index.js",
   "scripts": {

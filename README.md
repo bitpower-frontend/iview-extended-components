@@ -43,3 +43,9 @@ that is all.
 预览
 
 ![标签输入框](./preview/tag-input.png)
+
+### vue-echarts
+通用 echarts 组件
+
+### x-icon
+自定义 icon 组件，可单独设置项目需要的图标
