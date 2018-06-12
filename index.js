@@ -38,7 +38,7 @@ function setIcons (iconPath){
   requireAll(require.context(iconPath, false, /\.svg$/));
 }
 
-export default {
+module.exports = {
   ...components,
   extend,
   setIcons,
