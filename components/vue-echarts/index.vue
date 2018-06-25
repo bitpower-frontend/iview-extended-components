@@ -56,14 +56,13 @@
       };
     },
     mounted (){
-      this.eventHub.$on(this.resizeEvent, () => {
-        this.resize();
-      });
+      this.eventHub.$on(this.resizeEvent, this.resize);
       if(this.renderOnMounted){
         this.render();
       }
     },
     beforeDestroy (){
+      this.eventHub.$off(this.resizeEvent, this.resize);
       if(this.ins){
         // 销毁实例
         this.ins.dispose();
