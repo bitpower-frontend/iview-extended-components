@@ -65,6 +65,7 @@
       this.eventHub.$off(this.resizeEvent, this.resize);
       if(this.ins){
         // 销毁实例
+        this.ins.off('legendselectchanged');
         this.ins.dispose();
         this.ins = null;
       }
